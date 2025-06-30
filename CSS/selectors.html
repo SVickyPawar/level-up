@@ -7,16 +7,39 @@
 </head>
 <style>
     .main{
-        width: 30rem;
-        height: 20rem;
-        border: 1px solid red;
-        background-color: tomato;
+        width: 100%;
+        height: 100%;
         border-radius: 20px;
+        display: flex;
+        gap: 1rem;
+    }
+    .child{
+        width: 25rem;
+        height: 15rem;
+        border: 1px solid black;
+        font-size: 32px;
+        border-radius: 16px;
+    }
+
+    .child:last-child{
+        background-color: #B8E1FF;
+    }
+    .child:first-child{
+        background-color: #BCB6FF;
+    }
+    .child:nth-child(2){
+        background-color: #94FBAB;
+    }
+    .child:nth-child(3){
+        background-color: #82ABA1;
     }
 </style>
 <body>
     <div class="main">
-
+        <div class="child">One</div>
+        <div class="child">Two</div>
+        <div class="child">Three</div>
+        <div class="child">Four</div>
     </div>
 </body>
 </html>
