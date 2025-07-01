@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Layout Example</title>
+  <style>
+    :root {
+      --primary-color: #3498db;
+      --padding: 1.5rem;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f5f5f5;
+      color: #222;
+    }
+    header, footer {
+      background: var(--primary-color);
+      color: #fff;
+      padding: var(--padding);
+      text-align: center;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: var(--padding);
+    }
+    nav {
+      margin-bottom: var(--padding);
+    }
+    nav ul {
+      display: flex;
+      gap: 1rem;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      justify-content: center;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+    nav a:hover {
+      background: #217dbb;
+    }
+    .main-content {
+      display: flex;
+      gap: 2rem;
+    }
+    .sidebar {
+      flex: 1;
+      background: #e1ecf4;
+      padding: var(--padding);
+      border-radius: 8px;
+    }
+    .content {
+      flex: 3;
+      background: #fff;
+      padding: var(--padding);
+      border-radius: 8px;
+      min-width: 0;
+    }
+
+    /* ----------- Responsive Media Queries ----------- */
+
+    /* For tablets and below */
+    @media (max-width: 992px) {
+      .main-content {
+        flex-direction: column;
+      }
+      nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+
+    /* For large phones and small tablets */
+    @media (max-width: 768px) {
+      .container {
+        padding: 1rem;
+      }
+      .sidebar, .content {
+        padding: 1rem;
+      }
+      header, footer {
+        padding: 1rem;
+      }
+    }
+
+    /* For phones */
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.95rem;
+      }
+      .container {
+        padding: 0.5rem;
+      }
+      nav ul {
+        flex-direction: column;
+        gap: 0.25rem;
+      }
+      .sidebar, .content {
+        padding: 0.5rem;
+      }
+    }
+
+    /* Extra small devices */
+    @media (max-width: 400px) {
+      body {
+        font-size: 0.85rem;
+      }
+      header, footer {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Responsive Website Layout</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="container">
+    <div class="main-content">
+      <aside class="sidebar">
+        <h2>Sidebar</h2>
+        <p>Useful links and info go here.</p>
+      </aside>
+      <section class="content">
+        <h2>Main Content</h2>
+        <p>This area adapts to all screen sizes. Resize your browser or view on different devices to see the layout adjust responsively.</p>
+      </section>
+    </div>
+  </div>
+  <footer>
+    &copy; 2025 Responsive Layout Example
+  </footer>
+</body>
+</html>
