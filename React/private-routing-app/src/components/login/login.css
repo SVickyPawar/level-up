@@ -1,0 +1,27 @@
+.login-container{
+    position: relative;
+    width: 400px;
+    height: 250px;
+    border: 1px solid black;
+    margin: auto;
+    margin-top: 35px;
+    background-color: rgb(179, 175, 175);
+    border-radius: 1rem;
+}
+.login-container div{
+    margin-top: 20px;
+}
+
+.login-container form div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.login-container form div input{
+    height: 30px;
+}
+
+.login-container label{
+    font-size: 16px;
+}
