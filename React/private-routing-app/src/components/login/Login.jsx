@@ -7,19 +7,11 @@ import { AuthContext } from '../../context/AuthContext';
 const Login = () => {
     const navigate = useNavigate();
 
-    const {isAuthinticated,setIsAuthinticated} = useContext(AuthContext);
+    const {isAuthinticated,login} = useContext(AuthContext);
 
-    console.log(isAuthinticated,"isAuthinticated");
-
-
-
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        setIsAuthinticated(!isAuthinticated);
-    }
   return (
     <div className='login-container'>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={login}>
             <div>
                 <label >Username</label>
                 <input type="text" placeholder='Enter username' />
@@ -29,7 +21,7 @@ const Login = () => {
                 <input type="password" placeholder='Enter password' />
             </div>
             <div>
-                <input type="submit" value="Login" />
+                <input type="submit" value={isAuthinticated ? 'Logout' : 'Login'} />
             </div>
         </form>
     </div>
