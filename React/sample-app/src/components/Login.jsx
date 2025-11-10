@@ -6,10 +6,7 @@ const Login = () => {
         e.preventDefault();
         const formData = new FormData(e.target);
         console.log("formData", formData);
-        const email = formData.get('email');
-        const password = formData.get('password');
-        console.log("Email:", email);
-        console.log("Password:", password);
+
     }
     return (
         <div>
