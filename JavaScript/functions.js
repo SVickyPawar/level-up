@@ -27,7 +27,16 @@ let num = 2;
 
 // console.log("01" > 1);
 
-console.log(" " === false);
-console.log(0 === false);
-console.log("" == false);
-console.log(0 == false);
+// console.log(" " === false); // Triple equal always checks data types
+// console.log(0 === false);
+// console.log("" == false); // type coercion happens here
+// console.log(0 == false);
+
+function sayHello() {
+	if (true) {
+		var name = "vivek";
+		let sirname = "pawar";
+	}
+	console.log(sirname);
+}
+sayHello();

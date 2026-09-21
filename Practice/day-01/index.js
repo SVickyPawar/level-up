@@ -16,3 +16,18 @@ const getDate = now.getDate();
 console.log(getDate, "getDate");
 
 console.log(document.body, "docuuuu");
+
+function printName() {
+	let name = "Vivek";
+	console.log(name);
+}
+
+printName();
+
+function greet() {
+	console.log("Hello");
+}
+
+const result = greet();
+
+console.log(result);
