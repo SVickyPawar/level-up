@@ -1,6 +1,6 @@
 public class FirstFile {
     public static void main(String[] args){
-        System.out.println("Hello for my first Java program");
+        System.out.println("Hello from my first Java program");
     }
     
 }
