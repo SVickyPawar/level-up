@@ -17,7 +17,7 @@ public class ArrayProblem {
         int count = 0;
 
 
-        for(int j=0;j<sizeOfArray;j++){
+        for(int j=0; j<sizeOfArray;j++){
             if(array[j]==x){
                 count++;
                 System.out.println("For this number its index is " + j);
